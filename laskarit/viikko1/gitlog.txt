@@ -1,0 +1,103 @@
+commit 2e4b865f6f0f9445ebb58fa75842ef2f0a1bae2c
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:59:04 2021 +0200
+
+    poistettiin file1 ja nimettiin file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ba508373a5ada7e19c020bab1d53211946d52703
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:53:30 2021 +0200
+
+    lisättiin tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5cda9d085f9bae31be25ec426bcc53d4ddbc9fdc
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:38:58 2021 +0200
+
+    muokattiin eka.txt ja kolmas.txt
+
+ eka.txt    | 8 ++++++++
+ kolmas.txt | 8 ++++++++
+ 2 files changed, 16 insertions(+)
+
+commit 6bc8f4d9e2f23c4460c1e3fd69b918d833e43fe8
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:32:11 2021 +0200
+
+    nimettiin tiedosto.txt eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7b2e87127ea5a72b8c143a79c4821c3a1fbdfd92
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:27:34 2021 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 282157e45e66ac19e23af0d583d33e72ddc7b7df
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:23:16 2021 +0200
+
+    muokattiin tiedosto.txt
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 265eacafd111b59208e37bed9f852f2b009183a6
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:21:19 2021 +0200
+
+    muokattiin tiedosto.txt
+
+ tiedosto.txt | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+commit 3de60587ad6793f58663489257f31e4cbcf87fe9
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:10:20 2021 +0200
+
+    uusi hakemisto
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 40a4d6d76a5b9a7105a946cac3ebb91a97d66089
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:08:11 2021 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0972112d9a1ce9046426daa0c4960b661f509c4e
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 12:02:15 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 3 +++
+ toinen.txt   | 0
+ 2 files changed, 3 insertions(+)
+
+commit 82dcdcdd3b4acf40912ef482dafa23a40221f7da
+Author: Kozbeli <ossi.ilmanen@gmail.com>
+Date:   Wed Mar 17 11:56:54 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
