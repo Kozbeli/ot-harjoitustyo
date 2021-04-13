@@ -7,6 +7,8 @@
   
 ### **Viikko 2**  
 [vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md) 
+[työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md) 
 
 ### **Viikko 3**  
-### **Viikko 4**
+[kaaviotehtavat](./laskarit/viikko3/) 
+### **Viikko 4** 
