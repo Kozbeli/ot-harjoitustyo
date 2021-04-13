@@ -6,9 +6,9 @@
 [komentorivi.txt](https://github.com/Kozbeli/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)  
   
 ### **Viikko 2**  
-[vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md) 
-[työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md) 
+[vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
+[työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
 
 ### **Viikko 3**  
-[kaaviotehtavat](./laskarit/viikko3/) 
+[kaaviotehtavat](./laskarit/viikko3/)  
 ### **Viikko 4** 
