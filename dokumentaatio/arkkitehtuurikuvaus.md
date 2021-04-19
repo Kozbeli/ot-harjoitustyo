@@ -10,7 +10,7 @@ Käyttöliittymä sisältää viisi erilaista näykmää.
 * uuden käyttäjän luominen
 * katalogi
 * ostoskori
-* tilaushistoria 
+* tilaushistoria  
 Näkymät ovat yksitellen näkyvissä. Näkymät toteutetaan Scene-oliona ja sijoitetaan sovelluksen stageen. Käyttöliittymän ohjelmallinen toteutus löytyy luokasta ordermanager.ui.OrdermanagerUi. 
 
 ## **Sovelluslogiikka** ## 
