@@ -4,6 +4,6 @@ Sovellus toimii Helsingin yliopiston Tietojenkäsittelytieteen Ohjelmistotekniik
 ## **Dokumentaatio**
 
 [Vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
-[Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuurikuvaus.md)
-[Testausdokumentti](./dokumentaatio/testausdokumentti.md)
-[työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
+[Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuurikuvaus.md) 
+[Testausdokumentti](./dokumentaatio/testausdokumentti.md) 
+[Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
