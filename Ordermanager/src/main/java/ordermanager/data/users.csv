@@ -1,2 +1,4 @@
 admin;admin;Ykä;Yrittäjä;Teollisuuskatu 1;01234;Helsinki
-Username;Password;Name;Surname;Address;Postal Code;City
+Erkki123;Erkki123;Erkki;Esimerkki;asd123;0123;Helsinki
+käyttäjänimi;salasana;nimi;sukunimi;osoite;posti nro.;kaupunki
+uusi;uusi;uusi;uusi;uusi;123;uusi

@@ -1,14 +1,9 @@
-# **Ohjelmistotekniikka, harjoitustyö**
-## **Tehtävät**
-### **Viikko 1**
+# **Ordermanager** 
+Sovelluksen avulla käyttäjä voi luoda käyttäjätunnuksen ja valita tuotevalikoimasta tuotteita ostoskoriin. Sovellukseen voi luoda uuden käyttäjän, mikäli kyseinen käyttäjätunnus on vielä vapaana. Ylläpitäjän tunnuksilla pystyy tarkastelemaan kaikkien tilausten kokonaistilannetta.
+Sovellus toimii Helsingin yliopiston Tietojenkäsittelytieteen Ohjelmistotekniika harjoitustyönä. Sovelluksen tarkoituksena on harjoitella laajemman projektin toteuttamista sekä siihen liittyvää dokumentointia ja testausta.
+## **Dokumentaatio**
 
-[gitlog.txt](https://github.com/Kozbeli/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)  
-[komentorivi.txt](https://github.com/Kozbeli/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)  
-  
-### **Viikko 2**  
-[vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
+[Vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
+[Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuurikuvaus.md)
+[Testausdokumentti](./dokumentaatio/testausdokumentti.md)
 [työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
-
-### **Viikko 3**  
-[kaaviotehtavat](./laskarit/viikko3/)  
-### **Viikko 4** 

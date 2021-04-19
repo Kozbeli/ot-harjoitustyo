@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import ordermanager.domain.UserManagement;
@@ -105,6 +106,38 @@ public class OrdermanagerUi extends Application {
         Scene signup = new Scene(signupCredentials, 400, 350);
 
         // Catalog
+        
+        Label product1 = new Label("tuote 1");
+        Label product2 = new Label("tuote 2");
+        Label product3 = new Label("tuote 3");
+        Label product4 = new Label("tuote 4");
+        
+        Button logoutCatalog = new Button("Logout");
+        Button readyCatalog = new Button("Ready");
+        
+        GridPane products = new GridPane();
+        products.setMinSize(400, 350);
+        products.setPadding(new Insets(10, 10, 10, 10));
+        products.setVgap(5);
+        products.setHgap(5);
+        products.setAlignment(Pos.CENTER);
+        products.add(product1, 2,1);
+        products.add(product2, 3,1);
+        products.add(product3, 2,2);
+        products.add(product4, 3,2);
+        products.add(logoutCatalog, 4,4);
+        products.add(readyCatalog, 4,5);
+        
+        Scene catalog = new Scene(products, 400, 350);
+        
+        
+        
+        
+        
+        
+        
+        
+        
         // Shopping cart
         // Review
         createNew.setOnAction(e -> {
@@ -129,6 +162,19 @@ public class OrdermanagerUi extends Application {
                 primaryStage.setScene(start);
             }
 
+        });
+        
+        login.setOnAction(e -> {
+            String[] credentials = new String[2];
+            credentials[0] = usernameInput.getText();
+            credentials[1] = passwordInput.getText();
+            if (userManagement.login(credentials)) {
+                primaryStage.setScene(catalog);
+            }
+        });
+        
+        logoutCatalog.setOnAction(e -> {
+            primaryStage.setScene(start);
         });
 
     }
