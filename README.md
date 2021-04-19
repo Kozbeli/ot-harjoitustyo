@@ -3,7 +3,8 @@ Sovelluksen avulla käyttäjä voi luoda käyttäjätunnuksen ja valita tuoteval
 Sovellus toimii Helsingin yliopiston Tietojenkäsittelytieteen Ohjelmistotekniika harjoitustyönä. Sovelluksen tarkoituksena on harjoitella laajemman projektin toteuttamista sekä siihen liittyvää dokumentointia ja testausta.
 ## **Dokumentaatio**
 
-[Vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
-[Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuurikuvaus.md) 
-[Testausdokumentti](./dokumentaatio/testausdokumentti.md) 
-[Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
+* [Vaatimusmaarittely](./dokumentaatio/vaatimusmaarittely.md)  
+* [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuurikuvaus.md)  
+* [Testausdokumentti](./dokumentaatio/testausdokumentti.md)  
+* [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
+
