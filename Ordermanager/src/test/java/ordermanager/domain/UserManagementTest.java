@@ -3,6 +3,8 @@ package ordermanager.domain;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -76,6 +78,4 @@ public class UserManagementTest {
             System.out.println("Unable");
         }
     }
-    
-    
 }

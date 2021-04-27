@@ -1,8 +1,8 @@
 # **Arkkitehtuurikuvaus** #
 ## **Rakenne** ## 
 ![Rakenne](./kuvat/rakenne.png) 
-Pakkaus ordermanager.ui sisältää JavaFX:llä toteutetun graafisen käyttöliittymän. Pakkaus ordermanager.domain puolestaan sisältää sovelluslogiikan ja ordermanager.data käyttäjien ja tuotteiden pysyväistallennuksen. 
-
+Pakkaus ordermanager.ui sisältää JavaFX:llä toteutetun graafisen käyttöliittymän. Pakkaus ordermanager.domain puolestaan sisältää sovelluslogiikan ja ordermanager.data käyttäjien, tuotteiden ja tilausten pysyväistallennuksen. 
+![luokkakaavio](./kuvat/luokkakaavio.png)
 ## **Käyttöliittymä** ##
 ![käyttöliittymä](./kuvat/ui-luonnos.png)
 Käyttöliittymä sisältää viisi erilaista näykmää.
@@ -24,6 +24,7 @@ Käyttäjätunnukset ja tuotetiedot tallennetaan .csv tyyppiseen tiedostoon, eli
 ### **käyttäjän kirjautuminen** ### 
 Jos käyttäjä on aiemmin rekisteröitynyt käyttäjäksi, voi hän luomillaan tunnuksilla kirjautua suoraan katalogi näykmään.
 Login-painiketta painamalla tapahtumankäsittelijä kutsuu userManagement-olion login-metodia antaen käyttäjän syötteet parametrina. UserManagement tarkistaa tietokannasta kirjautumistietojen oikeellisuuden ja palauttaa tilanteesta riippuen true tai false.
+![sekvenssikaavio](./kuvat/sekvenssikaavio.png) 
 ### **uuden käyttäjän luominen** ### 
 Jos käyttäjällä ei ole aiempia tunnuksia, voi hän luoda uuden painamalla alkunäytöstä "Create new user" -nappia. Näkymän vaihduttua käyttäjä voi syöttää yhteystietonsa ja luoda uuden tunnuksen. Käyttöliittymä kutsuu userManagement-olion creaateNewUser-metodia, joka tarkistaa onko käyttäjätunnus vapaana. 
 ### **tuotteiden valitseminene** ###

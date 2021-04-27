@@ -2,22 +2,29 @@ package ordermanager.ui;
 
 import javafx.stage.Stage;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import ordermanager.domain.Product;
+import ordermanager.domain.ProductManagement;
 import ordermanager.domain.UserManagement;
 
 public class OrdermanagerUi extends Application {
 
     private UserManagement userManagement;
+    private ProductManagement productManagement;
 
     public static void main(String[] args) {
         launch(args);
@@ -27,8 +34,10 @@ public class OrdermanagerUi extends Application {
     public void init() throws Exception {
 
         String userFilePath = "src/main/java/ordermanager/data/users.csv";
+        String productFilePath = "src/main/java/ordermanager/data/products.csv";
 
         userManagement = new UserManagement(userFilePath);
+        productManagement = new ProductManagement(productFilePath);
     }
 
     @Override
@@ -105,47 +114,62 @@ public class OrdermanagerUi extends Application {
 
         Scene signup = new Scene(signupCredentials, 400, 350);
 
-        // Catalog
-        
-        Label product1 = new Label("tuote 1");
-        Label product2 = new Label("tuote 2");
-        Label product3 = new Label("tuote 3");
-        Label product4 = new Label("tuote 4");
-        
+        // Catalog scene
+        TableView<Product> itemList = new TableView();
+
+        TableColumn<Product, String> nameColumn = new TableColumn<>("Name");
+        nameColumn.setMinWidth(250);
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        TableColumn<Product, Double> priceColumn = new TableColumn<>("Price");
+        priceColumn.setMinWidth(100);
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        itemList.setItems(productManagement.getProducts());
+        itemList.getColumns().addAll(nameColumn, priceColumn);
+
         Button logoutCatalog = new Button("Logout");
         Button readyCatalog = new Button("Ready");
-        
-        GridPane products = new GridPane();
-        products.setMinSize(400, 350);
-        products.setPadding(new Insets(10, 10, 10, 10));
-        products.setVgap(5);
-        products.setHgap(5);
-        products.setAlignment(Pos.CENTER);
-        products.add(product1, 2,1);
-        products.add(product2, 3,1);
-        products.add(product3, 2,2);
-        products.add(product4, 3,2);
-        products.add(logoutCatalog, 4,4);
-        products.add(readyCatalog, 4,5);
-        
+        Button addToCart = new Button("Add");
+
+        HBox catalogControl = new HBox(10);
+        catalogControl.setPadding(new Insets(10, 10, 10, 10));
+        catalogControl.setAlignment(Pos.BOTTOM_RIGHT);
+        catalogControl.setSpacing(10);
+        catalogControl.getChildren().addAll(addToCart, readyCatalog, logoutCatalog);
+
+        Label nameLabel = new Label("Tuote");
+        Label priceLabel = new Label("Hinta");
+
+        HBox catalogLabel = new HBox(10);
+        catalogLabel.setPadding(new Insets(10, 10, 10, 10));
+        catalogLabel.setSpacing(10);
+        catalogLabel.setAlignment(Pos.BOTTOM_LEFT);
+        catalogLabel.getChildren().addAll(nameLabel, priceLabel, catalogControl);
+
+        BorderPane products = new BorderPane();
+        products.setCenter(itemList);
+        products.setBottom(catalogLabel);
+
         Scene catalog = new Scene(products, 400, 350);
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         // Shopping cart
         // Review
         createNew.setOnAction(e -> {
             primaryStage.setScene(signup);
+            usernameInput.setText("Username");
+            passwordInput.setText("Password");
         });
 
         signupCancel.setOnAction(e -> {
             primaryStage.setScene(start);
+            newUserInput.setText("Username");
+            newPasswordInput.setText("Password");
+            nameInput.setText("Name");
+            surnameInput.setText("Surname");
+            addressInput.setText("Address");
+            postalCodeInput.setText("Postal Code");
+            cityInput.setText("City");
         });
 
         signupReady.setOnAction(e -> {
@@ -163,7 +187,7 @@ public class OrdermanagerUi extends Application {
             }
 
         });
-        
+
         login.setOnAction(e -> {
             String[] credentials = new String[2];
             credentials[0] = usernameInput.getText();
@@ -172,9 +196,19 @@ public class OrdermanagerUi extends Application {
                 primaryStage.setScene(catalog);
             }
         });
-        
+
         logoutCatalog.setOnAction(e -> {
             primaryStage.setScene(start);
+        });
+
+        addToCart.setOnAction(e -> {
+            ObservableList<Product> productSelected, allProducts;
+            allProducts = itemList.getItems();
+            Product selectedProduct = itemList.getSelectionModel().getSelectedItem();
+            if (selectedProduct != null) {
+                nameLabel.setText(selectedProduct.getName());
+                priceLabel.setText("" + selectedProduct.getPrice());
+            }
         });
 
     }

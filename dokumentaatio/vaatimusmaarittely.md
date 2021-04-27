@@ -7,9 +7,16 @@ Sovelluksen käyttäjiä ovat yrittäjä ja asiakkaat.
 ## **Käyttöliittymäluonnos** 
 ![Luonnos](./kuvat/ui-luonnos.png)
 ## **Perusversion tarjoama toiminnallisuus** 
-Uusi käyttäjä voi rekisteröityä palveluun luomalla käyttäjätunnuksen ja salasanan, sekä antamalla yhteystiedot laskutusta varten.
-Asiakas voi valita yrittäjän määrittelemästä katalogista ostoskoriin tuotteita ja palveluita.
-Yrittäjällä on ennakkoon määritellyt tunnukset, joilla pääsee tarkastelemaan kaikkia tilaustietoja. 
+Sovelluksen tarjoamat tominnallisuudet: 
+- [x] Uusi käyttäjä voi rekisteröityä palveleuun. 
+- [x] Sovellus tallentaa uuden käyttäjän tunnukset ja yhteystiedot. 
+- [x] Sovelluksella on tuotevalikoima ja sitä pääsee selaamaan graafisessa käyttöliittymässä.
+- [ ] Rekisteröitynyt käyttäjä voi valita tuotteita tuotevalikoimasta ostoskoriin. 
+- [ ] Ostoskorin sisällön voi tarkistaa ennen tilauksen tekoa. 
+- [ ] Vahvistettu ostoskorin sisältö kirjataan tilaukseksi. 
+- [ ] Käyttäjä pääsee tarkastelemaan omaa tilaushistoriaa.
+- [ ] Yrittäjä pääsee tarkastelemaan kaikkien tilausten tilaushistoriaa. 
+
 ## **Jatkokehitysideoita** 
 Yritääjälle voisi luoda mahdollisuuden muokata katalogin sisältöä. 
 Asiakkaille voisi luoda mahdollisuuden kommentoida tuotteita ja palveluita.
