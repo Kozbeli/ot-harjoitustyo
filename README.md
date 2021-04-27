@@ -8,7 +8,8 @@ Sovellus toimii Helsingin yliopiston Tietojenkäsittelytieteen Ohjelmistotekniik
 * [Testausdokumentti](./dokumentaatio/testausdokumentti.md)  
 * [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
 
-## **Komentorivitoiminnot** 
+## **Komentorivitoiminnot**  
+Komentorivitoiminnot voi suorittaa hakemistosta Ordermanager
 ### **Testaus** 
 Ohjelman testaus onnistuu komennolla 
 ``` 
@@ -26,7 +27,7 @@ Tiedosto luodaan komennolla:
 ``` 
 mvn package 
 ``` 
-Näin luotu jar-tiedosto löytyy hakemistosta target/Ordermanager-1.0-SNAPSHOT.jar 
+Näin luotu jar-tiedosto löytyy hakemistosta target/Ordermanager-1.0-SNAPSHOT.jar  
 Ohjelman voi nyt suorittaa komentoriviltä komennolla 
 ``` 
 java -jar target/Ordermanager-1.0-SNAPSHOT.jar

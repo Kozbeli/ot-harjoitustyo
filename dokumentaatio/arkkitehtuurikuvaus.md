@@ -4,7 +4,8 @@
 Pakkaus ordermanager.ui sisältää JavaFX:llä toteutetun graafisen käyttöliittymän. Pakkaus ordermanager.domain puolestaan sisältää sovelluslogiikan ja ordermanager.data käyttäjien, tuotteiden ja tilausten pysyväistallennuksen. 
 ![luokkakaavio](./kuvat/luokkakaavio.png)
 ## **Käyttöliittymä** ##
-![käyttöliittymä](./kuvat/ui-luonnos.png)
+![käyttöliittymä](./kuvat/ui-luonnos.png) 
+
 Käyttöliittymä sisältää viisi erilaista näykmää.
 * kirjautuminen
 * uuden käyttäjän luominen
