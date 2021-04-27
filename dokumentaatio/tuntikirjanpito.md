@@ -6,4 +6,4 @@ päivä | aika | mitä tein
 13.4. |5     | Saatettiin graafinen käyttöliittymä alkuun ja lisättiin pari testiä
 19.4. |10    | Lisättiin käyttäjätunnusten pysyväistallennus ja laajennettii testausta
 27.4. |10    | Lisättiin kirjautumistoiminnallisuus ja tuotevalikoima 
- |35 | Yhteensä
+Yhteensä|35  |
