@@ -11,8 +11,8 @@ Sovelluksen tarjoamat tominnallisuudet:
 - [x] Uusi käyttäjä voi rekisteröityä palveleuun. 
 - [x] Sovellus tallentaa uuden käyttäjän tunnukset ja yhteystiedot. 
 - [x] Sovelluksella on tuotevalikoima ja sitä pääsee selaamaan graafisessa käyttöliittymässä.
-- [ ] Rekisteröitynyt käyttäjä voi valita tuotteita tuotevalikoimasta ostoskoriin. 
-- [ ] Ostoskorin sisällön voi tarkistaa ennen tilauksen tekoa. 
+- [x] Rekisteröitynyt käyttäjä voi valita tuotteita tuotevalikoimasta ostoskoriin. "tehty" 
+- [x] Ostoskorin sisällön voi tarkistaa ennen tilauksen tekoa. "tehty" 
 - [ ] Vahvistettu ostoskorin sisältö kirjataan tilaukseksi. 
 - [ ] Käyttäjä pääsee tarkastelemaan omaa tilaushistoriaa.
 - [ ] Yrittäjä pääsee tarkastelemaan kaikkien tilausten tilaushistoriaa. 

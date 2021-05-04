@@ -9,6 +9,7 @@ public class User {
     String address;
     int postalCode;
     String city;
+    String country;
 
     public User(String username,
             String password,
@@ -16,7 +17,8 @@ public class User {
             String surname,
             String address,
             int postalCode,
-            String city) {
+            String city,
+            String country) {
 
         this.username = username;
         this.password = password;
@@ -25,36 +27,86 @@ public class User {
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;
+        this.country = country;
     }
 
+    /**
+     * Method returns the username of the user.
+     *
+     * @return username
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * Method returns the password of the user.
+     *
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Method returns the name of the user.
+     *
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Method returns the surname of the user
+     *
+     * @return surname
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     * Method returns the address of the user
+     *
+     * @return address
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     * Method returns the postal Code of the user
+     *
+     * @return postal code
+     */
     public int getPostalCode() {
         return postalCode;
     }
 
+    /**
+     * Method returns the city of the user
+     *
+     * @return city
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     * Method returns the country of the user
+     *
+     * @return country
+     */
+    public String getCountry() {
+        return this.country;
+    }
+
+    /**
+     * Method returns all the user details
+     *
+     * @return user details
+     */
     @Override
     public String toString() {
         return username
@@ -63,7 +115,8 @@ public class User {
                 + ";" + surname
                 + ";" + address
                 + ";" + postalCode
-                + ";" + city;
+                + ";" + city
+                + ";" + country;
     }
 
 }

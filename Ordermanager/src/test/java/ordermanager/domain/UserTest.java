@@ -29,14 +29,15 @@ public class UserTest {
                 "surname",
                 "address",
                 1234,
-                "City");
+                "City",
+                "Country");
     }
 
     @Test
     public void userCanBeCreated() {
         assertTrue(user != null);
     }
-    
+
     @Test
     public void credentialsAreCorrect() {
         assertEquals("username", user.getUsername());
@@ -46,7 +47,8 @@ public class UserTest {
         assertEquals("address", user.getAddress());
         assertEquals(1234, user.getPostalCode());
         assertEquals("City", user.getCity());
-        assertEquals("username;password;name;surname;address;1234;City", user.toString());
+        assertEquals("Country", user.getCountry());
+        assertEquals("username;password;name;surname;address;1234;City;Country", user.toString());
     }
 
 }

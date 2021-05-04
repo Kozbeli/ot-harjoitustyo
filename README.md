@@ -40,3 +40,9 @@ mvn jxr:jxr checkstyle:checkstyle
 ``` 
 Käyttöliittymä on jätetty tarkistusten ulkopuolelle, mutta muuten mahdolliset virheilmoitukset löytyy hakemistosta target/site/checkstyle.html
 
+### **JavaDoc** 
+JavaDoc luodaan komennolla
+```
+mvn javadoc:javadoc
+```
+Komento luo selaimella avattavan JavaDocin hakemistoon target/site/apidocs/index.html
