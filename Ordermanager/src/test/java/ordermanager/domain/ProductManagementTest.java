@@ -1,8 +1,6 @@
 package ordermanager.domain;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import javafx.collections.ObservableList;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
