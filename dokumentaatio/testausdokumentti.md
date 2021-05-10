@@ -4,9 +4,9 @@ Ohjelmassa käytetään JUnit tyyppisiä yksikkö- ja integraatiotestejä. Lisä
 ## **Yksikkö- ja integraatiostestaus** 
 ### **sovelluslogiikka**
 Pakkauksen ordermanager.domain luokkia testaavat 
-* [OrderManagementTest](../Ordermanger/src/test/java/ordermanager/domain/OrderManagementTest.java) 
-* [ProductManagementTest](../Ordermanager/src/test/java/ordermanager/domain/OrderManagementTest.java) 
-* [ProductTest.java](../Ordermanager/src/test/java/ordermanager/domain/ProductManagementTest.java) 
+* [OrderManagementTest](../Ordermanager/src/test/java/ordermanager/domain/OrderManagementTest.java)  
+* [ProductManagementTest](../Ordermanager/src/test/java/ordermanager/domain/ProductManagementTest.java) 
+* [ProductTest.java](../Ordermanager/src/test/java/ordermanager/domain/ProductTest.java) 
 * [UserManagementTest](../Ordermanager/src/test/java/ordermanager/domain/UserManagementTest.java) 
 * [UserTest.java](../Ordermanager/src/test/java/ordermanager/domain/UserTest.java) 
 
