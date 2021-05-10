@@ -1,5 +1,5 @@
 # **Käyttöohje**
-lataa tiedosto ordermanager.jar
+lataa tiedosto [ordermanager.jar](https://github.com/Kozbeli/ot-harjoitustyo/releases/tag/viikko7)
 ## **Ohjelman käynnistäminen**
 Ohjelma käynnistyy komennolla
 ```

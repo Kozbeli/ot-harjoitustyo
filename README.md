@@ -9,8 +9,14 @@ Sovellus toimii harjoitustyönä Helsingin yliopiston Tietojenkäsittelytieteen 
 * [Testausdokumentti](./dokumentaatio/testausdokumentti.md)  
 * [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)  
 
+## **Releaset** 
+* [Viikko 5](https://github.com/Kozbeli/ot-harjoitustyo/releases/tag/viikko5)
+* [Viikko 6](https://github.com/Kozbeli/ot-harjoitustyo/releases/tag/viikko6) 
+* [Viikko 7](https://github.com/Kozbeli/ot-harjoitustyo/releases/tag/viikko7) 
+
 ## **Komentorivitoiminnot**  
 Komentorivitoiminnot voi suorittaa hakemistosta Ordermanager
+
 ### **Testaus** 
 Ohjelman testaus onnistuu komennolla 
 ``` 
