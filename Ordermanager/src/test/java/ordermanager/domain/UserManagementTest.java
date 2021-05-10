@@ -19,6 +19,7 @@ public class UserManagementTest {
 
         try {
             FileWriter writer = new FileWriter(new File(filePath));
+            writer.close();
         } catch (Exception e) {
             System.out.println("Couldn't intitialize fakeUsers.");
         }
@@ -63,9 +64,9 @@ public class UserManagementTest {
         assertFalse(userManagement.correct(testDummie1));
         String[] testDummie2 = {"test2", "test", "test", "test", "test", "testi", "test", "test"};
         assertFalse(userManagement.correct(testDummie2));
-        String[] testDummie3 = {"test2", "test", "test", "test", "", "123", "test", "test"};
+        String[] testDummie3 = {"test3", "test", "test", "test", "", "123", "test", "test"};
         assertFalse(userManagement.correct(testDummie3));
-        String[] testDummie4 = {"test2", ";", "test", "test", "test", "testi", "test", "test"};
+        String[] testDummie4 = {"test4", ";", "test", "test", "test", "testi", "test", "test"};
         assertFalse(userManagement.correct(testDummie4));
     }
 
@@ -77,15 +78,28 @@ public class UserManagementTest {
 
     @Test
     public void usersCanBeAddedToDatabase() {
-        User user = new User("test3", "test", "test", "test", "test", 123, "test", "test");
+        User testDummie5 = new User("test5", "test", "test", "test", "test", 123, "test", "test");
         try {
-            userManagement.addUser(user);
+            userManagement.addUser(testDummie5);
             userManagement.users.clear();
             userManagement.readUsersList(filePath);
-            assertTrue(userManagement.users.contains(user.getUsername()));
+            assertTrue(userManagement.users.contains(testDummie5.getUsername()));
         } catch (Exception e) {
             System.out.println("Unable");
         }
     }
-    
+
+    @Test
+    public void loginMethodReturnsRightValue() throws IOException {
+        String[] testDummie6 = {"test6", "test6", "test6", "test6", "test6", "123", "test6", "test6"};
+        assertFalse(userManagement.login(testDummie6));
+        User user = userManagement.getUser(testDummie6);
+        assertTrue(user == null);
+        user = new User("test6", "test6", "test6", "test6", "test6", 123, "test6", "test6");
+        userManagement.addUser(user);
+        assertTrue(userManagement.login(testDummie6));
+        testDummie6[1] = "wrongPassword";
+        assertFalse(userManagement.login(testDummie6));
+    }
+
 }

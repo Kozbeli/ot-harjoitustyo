@@ -24,15 +24,4 @@ public class ProductManagementTest {
     public void productManagerCanBeConstructed() {
         assertTrue(this.productManagement != null);
     }
-
-    @Test
-    public void productManagementReturnsCorrectList() throws IOException {
-        ObservableList<Product> testList = productManagement.getProducts();
-        productManagement.products.clear();
-        assertTrue(productManagement.products.isEmpty());
-        productManagement.loadProductsList();
-        for (int i = 0; i < testList.size(); i++) {
-            assertTrue(productManagement.products.get(i).equals(testList.get(i)));
-        }
-    }
 }

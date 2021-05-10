@@ -97,12 +97,6 @@ public class UserManagement {
         return true;
     }
 
-    @Override
-    public String toString() {
-        int count = this.users.size();
-        return "Registered users: " + count;
-    }
-
     /**
      * This method adds an user into permanent storage.
      *
@@ -140,7 +134,6 @@ public class UserManagement {
         if (!users.contains(credentials[0])) {
             return user;
         }
-
         try {
             Scanner reader = new Scanner(new File(file));
             while (reader.hasNextLine()) {
@@ -148,20 +141,18 @@ public class UserManagement {
                 if (!parts[0].equals(credentials[0])) {
                     continue;
                 }
-
-                user = new User(
-                        parts[0],
-                        parts[1],
-                        parts[2],
-                        parts[3],
-                        parts[4],
-                        Integer.valueOf(parts[5]),
-                        parts[6],
-                        parts[7]);
+                user = new User(parts[0], parts[1], parts[2], parts[3], parts[4],
+                        Integer.valueOf(parts[5]), parts[6], parts[7]);
             }
             return user;
         } catch (FileNotFoundException ex) {
             return user;
         }
+    }
+
+    @Override
+    public String toString() {
+        int count = this.users.size();
+        return "Registered users: " + count;
     }
 }

@@ -152,19 +152,27 @@ public class OrdermanagerUi extends Application {
         Button logoutCatalog = new Button("Logout");
         Button readyCatalog = new Button("Ready");
         Button addToCart = new Button("Add");
+        Button orders = new Button("Orders");
 
-        ObservableList<String> options = FXCollections.observableArrayList(
-                "Small",
-                "Medium",
-                "Large"
+        ObservableList<Integer> options = FXCollections.observableArrayList(
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
         );
         final ComboBox comboBox = new ComboBox(options);
+        comboBox.setValue(1);
 
         HBox catalogControl = new HBox(10);
         catalogControl.setPadding(new Insets(10, 10, 10, 10));
         catalogControl.setAlignment(Pos.BOTTOM_RIGHT);
         catalogControl.setSpacing(10);
-        catalogControl.getChildren().addAll(comboBox, addToCart, readyCatalog, logoutCatalog);
+        catalogControl.getChildren().addAll(comboBox, addToCart, readyCatalog, orders, logoutCatalog);
 
         Label nameLabel = new Label("Select");
         Label priceLabel = new Label("Products");
@@ -185,7 +193,7 @@ public class OrdermanagerUi extends Application {
 
         Scene catalog = new Scene(products, 700, 350);
 
-        // Shopping cart
+        // Shopping cart scene
         Button cartCancel = new Button("Cancel");
         Button cartReady = new Button("Confirm");
 
@@ -200,7 +208,22 @@ public class OrdermanagerUi extends Application {
 
         Scene shoppingCart = new Scene(cartLayout, 700, 350);
 
-        // Review
+        // Review scene
+        Button reviewCancel = new Button("Cancel");
+        Button reviewLogout = new Button("Logout");
+
+        HBox reviewButtons = new HBox();
+        reviewButtons.setPadding(new Insets(10, 10, 10, 10));
+        reviewButtons.setSpacing(10);
+        reviewButtons.setAlignment(Pos.BOTTOM_RIGHT);
+        reviewButtons.getChildren().addAll(reviewCancel, reviewLogout);
+
+        BorderPane reviewLayout = new BorderPane();
+        reviewLayout.setBottom(reviewButtons);
+
+        Scene review = new Scene(reviewLayout, 700, 350);
+
+        // Button actions        
         createNew.setOnAction(e -> {
             loginError.setText("");
             primaryStage.setScene(signup);
@@ -246,6 +269,7 @@ public class OrdermanagerUi extends Application {
             credentials[1] = passwordInput.getText();
             if (userManagement.login(credentials)) {
                 primaryStage.setScene(catalog);
+                orderManagement.setUser(userManagement.getUser(credentials));
                 usernameInput.setText("Username");
                 passwordInput.setText("Password");
                 orderManagement.newCart();
@@ -262,24 +286,20 @@ public class OrdermanagerUi extends Application {
 
             Product selectedProduct = itemList.getSelectionModel().getSelectedItem();
             if (selectedProduct != null) {
-                String size = (String) comboBox.getValue();
-                nameLabel.setText(selectedProduct.getName() + " " + size);
-                priceLabel.setText(""
-                        + selectedProduct.getPrice()
+                int quantity = (int) comboBox.getValue();
+                nameLabel.setText(selectedProduct.getName() + " x" + quantity);
+                priceLabel.setText(selectedProduct.getPrice()
                         + "€ " + " added to cart!");
-                orderManagement.addToCart(selectedProduct);
+                orderManagement.addToCart(selectedProduct, quantity);
             }
         });
 
         readyCatalog.setOnAction(e -> {
-            ObservableList<Product> cartSelection = orderManagement.getCartSelections();
-            double total = cartSelection.stream()
-                    .mapToDouble(p -> p.getPrice())
-                    .sum();
-            ListView listView = new ListView(orderManagement.getCartSelections());
+            nameLabel.setText("Select");
+            priceLabel.setText("Products");
+            ListView listView = new ListView(orderManagement.getCartView());
             listView.setPrefSize(400, 250);
-            //listView.setEditable(true);
-            Label cartTotal = new Label("Total: " + total);
+            Label cartTotal = new Label("Total: " + orderManagement.getTotal());
             cartLayout.setCenter(listView);
             cartLayout.setTop(cartTotal);
             primaryStage.setScene(shoppingCart);
@@ -287,6 +307,34 @@ public class OrdermanagerUi extends Application {
 
         cartCancel.setOnAction(e -> {
             primaryStage.setScene(catalog);
+        });
+
+        cartReady.setOnAction(e -> {
+            orderManagement.saveOrder();
+            ListView listView = new ListView(orderManagement.getOrders());
+            listView.setPrefSize(400, 250);
+            Label reviewNote = new Label("Your order has been received!");
+            reviewLayout.setCenter(listView);
+            reviewLayout.setTop(reviewNote);
+            primaryStage.setScene(review);
+        });
+
+        reviewCancel.setOnAction(e -> {
+            orderManagement.newCart();
+            primaryStage.setScene(catalog);
+        });
+
+        reviewLogout.setOnAction(e -> {
+            primaryStage.setScene(start);
+        });
+
+        orders.setOnAction(e -> {
+            ListView listView = new ListView(orderManagement.getOrders());
+            listView.setPrefSize(400, 250);
+            Label reviewNote = new Label("Order History");
+            reviewLayout.setCenter(listView);
+            reviewLayout.setTop(reviewNote);
+            primaryStage.setScene(review);
         });
 
     }
